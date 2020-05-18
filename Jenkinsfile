@@ -13,15 +13,7 @@ pipeline {
                }
          }
          
-         stage("copying files to /var/www/html")
-         {
-           steps 
-           {
-              sh "sudo cp /home/localadmin/project/www/html/index.html /var/www/html/"
-           }
-          }
-          
-           stage("Installing the webserver and starting its service")
+		  stage("Installing the webserver and starting its service")
           {
             steps
             {
@@ -29,8 +21,15 @@ pipeline {
               sh "sudo systemctl start apache2"
             }
           }
-          
-          
+         		 
+         stage("copying files to /var/www/html")
+         {
+           steps 
+           {
+              sh "sudo cp /home/localadmin/project/www/html/index.html /var/www/html/"
+           }
+          }
+                         
           stage("Restarting the apache2 service")
           {
             steps
