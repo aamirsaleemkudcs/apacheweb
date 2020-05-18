@@ -8,7 +8,7 @@ pipeline {
               sh "cd /home/localadmin/"
               sh "mkdir -p /home/localadmin/project"
               sh "cd /home/coreopt1/project"
-              sh "git clone https://github.com/aamirsaleemkudcs/apacheweb /home/localadmin/project"
+              sh "git clone https://github.com/aamirsaleemkudcs/apacheweb.git /home/localadmin/project"
                
                }
          }
